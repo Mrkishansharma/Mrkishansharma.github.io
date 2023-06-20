@@ -15,6 +15,8 @@ prev2.onclick = function(){
     reloadSlider2();
 }
 
+
+
 function reloadSlider2(){
     slider2.style.left = -items2[active2].offsetLeft + 'px';
     // 

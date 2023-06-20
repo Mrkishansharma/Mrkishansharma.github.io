@@ -86,14 +86,14 @@ const contactSubmit = document.getElementById("contactSubmit");
 contactSubmit.onclick = async (e) => {
   e.preventDefault();
   console.log([contactName.value, contactEmail.value, contactMessage.value]);
-
+ 
   const data = {
-    service_id: 'service_icbqhz9',
-    template_id: 'template_eminqhk',
-    user_id: 'ta-WWGEIz_7x47NNm',
+    service_id: 'service_cud71u7',
+    template_id: 'template_ra4xl6w',
+    user_id: '0',
     template_params: {
       'from_name': contactName.value,
-      'to_name' : 'Aniket',
+      'to_name' : 'Kishan',
       'message' : contactMessage.value,
       'from_email' : contactEmail.value
     }
@@ -108,6 +108,7 @@ contactSubmit.onclick = async (e) => {
         'Content-type' : 'application/json'
       }
     })
+    console.log(Email);
 
     if(Email.ok){
       console.log('Msg received');

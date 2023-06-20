@@ -13,11 +13,11 @@
   <link rel="stylesheet" href="./Styles/github.css">
   <link rel="stylesheet" href="./Styles/index.css">
 
-  <link rel="stylesheet" href="./slider2.css">
-  <link rel="stylesheet" href="./slider3.css">
-  <link rel="stylesheet" href="./slider4.css">
-  <link rel="stylesheet" href="./slider5.css">
-  
+  <link rel="stylesheet" href="./Styles/slider2.css">
+  <link rel="stylesheet" href="./Styles/slider3.css">
+  <link rel="stylesheet" href="./Styles//slider4.css">
+  <link rel="stylesheet" href="./Styles/slider5.css">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
 
@@ -38,9 +38,9 @@
 <body>
   <!-- Navbar Section Start -->
   <header id="nav-menu">
-    <a href="#" class="logo">&lt; <span>Kishan</span> &gt;</a>
+    <a href="#" class="logo">&lt; <span> <span style="color: red;">K</span>ishan</span> &gt;</a>
 
-    <div class="bx bx-menu" id="menu-icon">kkk</div>
+    <div class="bx bx-menu" id="menu-icon"></div>
 
     <ul class="navbar">
       <li><a href="#home" class="nav-link home">Home</a></li>
@@ -50,11 +50,11 @@
       <li><a href="#contact" class="nav-link contact">Contact</a></li>
 
       <li id="resume-button-1">
-        <a href="./Media/Kishan-Sharma-Resume.pdf" target="_blank" download="Kishan-Sharma-Resume" class="nav-link resume"
-          id="resume-link-1"> 
-            Resume 
-            &nbsp; 
-            <i class="fa-solid fa-cloud-arrow-down"></i> 
+        <a href="./Media/Kishan-Sharma-Resume.pdf" target="_blank" download="Kishan-Sharma-Resume"
+          class="nav-link resume" id="resume-link-1">
+          Resume
+          &nbsp;
+          <i class="fa-solid fa-cloud-arrow-down"></i>
         </a>
       </li>
 
@@ -100,10 +100,11 @@
 
     <div class="about-container">
       <div class="homeImage">
-        <img class="home-img" src="./profile.png" alt="">
+        <img class="home-img" src="./Images/profile.png" alt="">
       </div>
       <div>
-        <p class="about-text" id="user-detail-intro">  I am a web developer proficient in NodeJS Backend Tech. and DSA, with
+        <p class="about-text" id="user-detail-intro"> I am a web developer proficient in NodeJS Backend Tech. and DSA,
+          with
           an ever-growing passion for implementing and launching new projects
           that have tangible outcomes for others. Ability to work well in
           team-oriented and collaborative projects. Looking forward to working
@@ -132,15 +133,15 @@
         </div>
 
         <li id="resume-button-2">
-          <a href="./Media/Kishan-Sharma-Resume.pdf" target="_blank" download="Kishan-Sharma-Resume" class="nav-link resume btn"
-            id="resume-link-2">
-              Resume&nbsp;
-              <i class="fa-solid fa-cloud-arrow-down"></i>
+          <a href="./Media/Kishan-Sharma-Resume.pdf" target="_blank" download="Kishan-Sharma-Resume"
+            class="nav-link resume btn" id="resume-link-2">
+            Resume&nbsp;
+            <i class="fa-solid fa-cloud-arrow-down"></i>
           </a>
         </li>
 
 
-        
+
         <!-- <li id="resume-button-2">
           <a href="./Media/Kishan-Sharma-Resume.pdf" target="_blank" id="resume-link-2" class="button"
             download="Kishan-Sharma-Resume">Resume <i class='bx bxs-download'></i></a>
@@ -219,7 +220,8 @@
       </div>
       <div class="skills-card">
         <div>
-          <img class="skills-card-img" src="https://socket.io/images/logo-dark.svg" alt="">
+          <!-- <img class="skills-card-img" src="https://socket.io/images/logo-dark.svg" alt=""> -->
+          <img class="skills-card-img" src="https://www.vectorlogo.zone/logos/socketio/socketio-icon.svg" alt="">
         </div>
         <p class="skills-card-name green">Socket.io</p>
       </div>
@@ -289,29 +291,31 @@
       <span>My projects</span>
     </div>
     <!-- <div id="fourProjects"> -->
+
     <!-- 1st Project  -->
     <div id="projects2">
+
       <div class="project-card">
         <!-- Carousal -->
         <div class="slider2">
           <div class="list2">
             <div class="item2">
-              <img src="Media/dent1.png" alt="">
+              <img src="./Projects/QR/landing.png" alt="">
             </div>
             <div class="item2">
-              <img src="Media/dent2.png" alt="">
+              <img src="./Projects/QR/generate.png" alt="">
             </div>
             <div class="item2">
-              <img src="Media/dent3.png" alt="">
+              <img src="./Projects/QR/scanner.png" alt="">
             </div>
             <div class="item2">
-              <img src="Media/dent4.png" alt="">
+              <img src="./Projects/QR/admin.png" alt="">
             </div>
 
           </div>
           <div class="buttons2">
             <button id="prev2">
-              << /button>
+              < </button>
                 <button id="next2">></button>
           </div>
           <ul class="dots2">
@@ -326,10 +330,11 @@
         <!-- Details -->
         <div class="project-details">
           <div>
-            <h1 class="project-title white">DENTCARE &nbsp; [&nbsp;Clone&nbsp;]</h1>
+            <h1 class="project-title white">QR Code Generator & Scanner &nbsp; </h1>
             <p class="project-description green poppins">
-              DENTCARE ia a dental appointmrnt booking system where user can login
-              and book an appointment with any doctor according to his problem.
+              Developed a QR Code Generator for Zoom, Whatsapp,
+              Email,V-Card, Phone, Text, Link, UPI and Wi-fi as well as
+              scan the QR Code
             </p>
 
           </div>
@@ -371,9 +376,11 @@
               class="project-github-link btn2">
               < CodeBase>
             </a>
-            <a target="_blank" href="https://qr-insight-craft.netlify.app/" class="project-github-link project-deployed-link btn2">Live</a>
+            <a target="_blank" href="https://qr-insight-craft.netlify.app/"
+              class="project-github-link project-deployed-link btn2">Live</a>
           </div>
         </div>
+
       </div>
 
       <!-- 2nd Project  -->
@@ -383,22 +390,22 @@
         <div class="slider3">
           <div class="list3">
             <div class="item3">
-              <img src="Media/tt1.png" alt="">
+              <img src="./Projects/Todo/home.png" alt="">
             </div>
             <div class="item3">
-              <img src="Media/tt2.png" alt="">
+              <img src="./Projects/Todo/login.png" alt="">
             </div>
             <div class="item3">
-              <img src="Media/tt3.png" alt="">
+              <img src="./Projects/Todo/todo.png" alt="">
             </div>
             <div class="item3">
-              <img src="Media/tt4.png" alt="">
+              <img src="./Projects/Todo/about.png" alt="">
             </div>
 
           </div>
           <div class="buttons3">
             <button id="prev3">
-              << /button>
+              < </button>
                 <button id="next3">></button>
           </div>
           <ul class="dots3">
@@ -413,10 +420,9 @@
         <!-- Details -->
         <div class="project-details">
           <div>
-            <h1 class="project-title white">TutorPedia&nbsp; [&nbsp;Clone&nbsp;]</h1>
+            <h1 class="project-title white">Todo App &nbsp; </h1>
             <p class="project-description green poppins">
-              TutorPedia is tutor appointment booking system here you can book
-              appointment regards any subject you want with best tutors of india.
+              Efficiently manage your tasks and boost productivity with my intuitive and user-friendly to-do website.
             </p>
           </div>
           <div>
@@ -453,11 +459,10 @@
             </div>
           </div>
           <div class="project-btn-div">
-            <a target="_blank" href="https://github.com/Niteshthori24198/substantial-money-3994"
-              class="project-github-link btn2">
+            <a target="_blank" href="https://github.com/Mrkishansharma/Todo-App" class="project-github-link btn2">
               < CodeBase>
             </a>
-            <a target="_blank" href="https://qr-insight-craft.netlify.app/"
+            <a target="_blank" href="https://todo-create-app.netlify.app/"
               class="project-github-link btn2 project-deployed-link">Live</a>
 
           </div>
@@ -471,22 +476,22 @@
         <div class="slider4">
           <div class="list4">
             <div class="item4">
-              <img src="Media/divex1.png" alt="">
+              <img src="./Projects/Meesho/home.png" alt="">
             </div>
             <div class="item4">
-              <img src="Media/divex2.png" alt="">
+              <img src="./Projects/Meesho/product.png" alt="">
             </div>
             <div class="item4">
-              <img src="Media/divex3.png" alt="">
+              <img src="./Projects/Meesho/cart.png" alt="">
             </div>
             <div class="item4">
-              <img src="Media/divex4.png" alt="">
+              <img src="./Projects/Meesho/admin.png" alt="">
             </div>
 
           </div>
           <div class="buttons4">
             <button id="prev4">
-              << /button>
+              < </button>
                 <button id="next4">></button>
           </div>
           <ul class="dots4">
@@ -501,10 +506,13 @@
         <!-- Details -->
         <div class="project-details">
           <div>
-            <h1 class="project-title white">Nature Basket&nbsp; </h1>
+            <h1 class="project-title white">Meesho &nbsp; [&nbsp;Clone&nbsp;] </h1>
             <p class="project-description green poppins">
-              Nature Basket an eccomerse site where you can buy food Items and also
-              you can buy grossery items. We used API to build product page .
+              I created a comprehensive website that features both an
+              admin and user interface, allowing for seamless
+              navigation and functionality, providing a smooth user
+              experience.
+
             </p>
           </div>
           <div>
@@ -523,29 +531,29 @@
                 <img src="https://www.javascripttutorial.net/wp-content/uploads/2021/04/JavaScript-Tutorial.svg"
                   alt="" />
               </div>
-              <div>
-                <!-- NodeJS  -->
+              <!-- <div>
+                NodeJS 
                 <img src="https://rohithanss.github.io/skills/nodejs.png" alt="">
               </div>
               <div>
-                <!-- ExpressJS -->
+                ExpressJS
                 <img src="https://rohithanss.github.io/skills/expressJs.png" alt="">
               </div>
               <div>
-                <!-- MongoDB -->
+                MongoDB
                 <img class="mongoClass"
                   src="https://hanumat-sharan.github.io/static/media/mongodb-seeklogo.com.1aca075d5cce0819fea7ea0902d94ce4.svg"
                   alt="">
-              </div>
+              </div> -->
 
             </div>
           </div>
           <div class="project-btn-div">
-            <a target="_blank" href="https://github.com/Niteshthori24198/substantial-money-3994"
+            <a target="_blank" href="https://github.com/Mrkishansharma/-bouncy-invention-713"
               class="project-github-link btn2">
               < CodeBase>
             </a>
-            <a target="_blank" href="https://qr-insight-craft.netlify.app/"
+            <a target="_blank" href="https://bazaarbuddy.netlify.app/"
               class="project-github-link btn2 project-deployed-link">
               < Live>
             </a>
@@ -560,24 +568,24 @@
         <div class="slider5">
           <div class="list5">
             <div class="item5">
-              <img src="Media/Nykaa2.png" alt="">
+              <img src="./Projects/Quikr/landing.png" alt="">
             </div>
             <div class="item5">
-              <img src="Media/Nykaa3.png" alt="">
+              <img src="./Projects/Quikr/home.png" alt="">
             </div>
             <div class="item5">
-              <img src="Media/Nykaa1.png" alt="">
+              <img src="./Projects/Quikr/product.png" alt="">
             </div>
             <div class="item5">
-              <img src="Media/Nykaa4.png" alt="">
+              <img src="./Projects/Quikr/single.png" alt="">
             </div>
             <div class="item5">
-              <img src="Media/Nykaa1.png" alt="">
+              <img src="./Projects/Quikr/dashboard.png" alt="">
             </div>
           </div>
           <div class="buttons5">
             <button id="prev5">
-              << /button>
+              < </button>
                 <button id="next5">></button>
           </div>
           <ul class="dots5">
@@ -592,10 +600,9 @@
         <!-- Details -->
         <div class="project-details">
           <div>
-            <h1 class="project-title white">ENVOY&nbsp; [&nbsp;Clone&nbsp;]</h1>
+            <h1 class="project-title white">Quikr Bazaar &nbsp; [&nbsp;Clone&nbsp;]</h1>
             <p class="project-description green poppins">
-              ENVOY is a site which is help you to find your job like naukari.COM
-              here you have to fill your details and we provide you jobs
+              Introducing a clone of Quikr Bazaar, a dynamic online marketplace that empowers users to buy, sell, and trade a wide range of products conveniently and securely.
             </p>
           </div>
           <div>
@@ -614,30 +621,29 @@
                 <img src="https://www.javascripttutorial.net/wp-content/uploads/2021/04/JavaScript-Tutorial.svg"
                   alt="" />
               </div>
-              <div>
-                <!-- NodeJS  -->
+              <!-- <div>
+                NodeJS 
                 <img src="https://rohithanss.github.io/skills/nodejs.png" alt="">
               </div>
               <div>
-                <!-- ExpressJS -->
+                ExpressJS
                 <img src="https://rohithanss.github.io/skills/expressJs.png" alt="">
               </div>
               <div>
-                <!-- MongoDB -->
+                MongoDB
                 <img class="mongoClass"
                   src="https://hanumat-sharan.github.io/static/media/mongodb-seeklogo.com.1aca075d5cce0819fea7ea0902d94ce4.svg"
                   alt="">
-              </div>
+              </div> -->
 
             </div>
           </div>
           <div class="project-btn-div">
-            <a target="_blank" href="https://github.com/Niteshthori24198/substantial-money-3994"
+            <a target="_blank" href="https://github.com/Mrkishansharma/dull-party-2583"
               class="project-github-link btn2 project-deployed-link">
               < CodeBase>
             </a>
-            <a target="_blank" href="https://qr-insight-craft.netlify.app/"
-              class="project-github-link btn2">Live</a>
+            <a target="_blank" href="https://sellbuyer-app.netlify.app/" class="project-github-link btn2">Live</a>
           </div>
         </div>
       </div>
@@ -729,17 +735,17 @@
         <div class="social-media">
           <p>Connect with Me :</p>
           <div class="social-icons">
-            <a href="https://github.com/aniketbabariya24" id="contact-github">
+            <a href="https://github.com/Mrkishansharma" target="_blank" id="contact-github">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/aniket-babariya-42b1141ba/" id="contact-linkedin">
+            <a href="https://www.linkedin.com/in/kishan-sharma6377/" target="_blank" id="contact-linkedin">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://twitter.com/aniketb24" id="contact-phone">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/aniketbabariya24" id="contact-phone">
+            <a href="https://www.instagram.com/mr.kishan_sharma" target="_blank" id="contact-phone">
               <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.hackerrank.com/kishansharma6377?hr_r=1" target="_blank" id="contact-hackerrank">
+              <i class="fab fa-hackerrank"></i>
             </a>
           </div>
         </div>
@@ -749,6 +755,7 @@
         <span class="circle one"></span>
         <span class="circle two"></span>
 
+        <!-- <form action="https://formsubmit.co/kishansharma6377@gmail.com" method="POST" autocomplete="off"> -->
         <form action="index.html" autocomplete="off">
           <h3 class="title">Contact Me</h3>
           <div class="input-container">
@@ -771,7 +778,7 @@
             <label for="">Message</label>
             <span>Message</span>
           </div>
-          <input type="submit" value="Send" class="btn" id="contactSubmit" />
+          <input type="submit" value="Send" class="btn" id="contactSubmit" style="color: white;" />
         </form>
       </div>
     </div>
@@ -787,11 +794,13 @@
   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="./index.js"></script>
-<script src="./slider5.js"></script>
-<script src="./slider4.js"></script>
-<script src="./slider3.js"></script>
-<script src="./slider2.js"></script>
+
+<script src="./Scripts/index.js"></script>
+<script src="./Scripts/slider5.js"></script>
+<script src="./Scripts/slider4.js"></script>
+<script src="./Scripts/slider3.js"></script>
+<script src="./Scripts/slider2.js"></script>
+
 <script>
   GitHubCalendar(".calendar", "Mrkishansharma", {
     responsive: true,
@@ -805,4 +814,3 @@
 </script>
 
 <!-- service_icbqhz9 -->
-
