@@ -1,85 +1,108 @@
-let i=0;
-let txt="Full Stack Web Developer.";
-let speed=75;
+let header = document.querySelector("header");
+let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 
-typeWriter()
+window.addEventListener("scroll", () => {
+  header.classList.toggle("shadow", window.scrollY > 0);
+});
 
-function typeWriter() {
-    if(i < txt.length){
-      document.getElementById("user-detail-name").style.color="white";
-      document.getElementById("demo1").innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-    else {
-      // reset the index when it reaches the end of the text
-      i = 0;
-      // clear the text
-      document.getElementById("demo1").innerHTML = "";
-      // make the recursive call
-      document.getElementById("user-detail-name").style.color="#71e281";
-      setTimeout(typeWriter, speed);
-    }
+menu.onclick = () => {
+  navbar.classList.toggle("active");
+};
+window.onscroll = () => {
+  navbar.classList.remove("active");
+};
+
+// Dark Mode / light mode
+let darkmode = document.querySelector("#darkmode");
+
+darkmode.onclick = () => {
+  if (darkmode.classList.contains("bx-sun")) {
+    darkmode.classList.replace("bx-sun", "bx-moon");
+    document.body.classList.add("active");
+  } else {
+    darkmode.classList.replace("bx-moon", "bx-sun");
+    document.body.classList.remove("active");
   }
+};
+
+const resume = document.getElementById("resume-button-1");
+resume.onclick = (e) => {
+    // e.preventDefault()
+    window.open("./Media/Aniket_Babariya_Resume.pdf")
+    // console.log("Click");
+}
+
+const containerResume = document.getElementById("resume-button-2");
+containerResume.onclick = (e) => {
+    // e.preventDefault()
+    window.open("./Media/Aniket_Babariya_Resume.pdf")
+    // console.log("Click");
+}
+                          
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
 
 
-  var myNav = document.getElementById('nav-menu');
-  var myNav2 = document.getElementById('main');
-  window.onscroll = function () { 
-      if ( document.documentElement.scrollTop >= 15 ) {
-          myNav.classList.add("nav-colored");
-          myNav2.classList.add("nav-colored");
-          // myNav.classList.remove("nav-transparent");
-      } 
-      else {
-          // myNav.classList.add("nav-transparent");
-          myNav.classList.remove("nav-colored");
-          myNav2.classList.remove("nav-colored");
-      }
+const contactName = document.getElementById("contactName");
+const contactEmail = document.getElementById("contactEmail");
+const contactMessage = document.getElementById("contactMessage");
+
+const contactSubmit = document.getElementById("contactSubmit");
+contactSubmit.onclick = async (e) => {
+  e.preventDefault();
+  console.log([contactName.value, contactEmail.value, contactMessage.value]);
+
+  const data = {
+    service_id: 'service_icbqhz9',
+    template_id: 'template_eminqhk',
+    user_id: 'ta-WWGEIz_7x47NNm',
+    template_params: {
+      'from_name': contactName.value,
+      'to_name' : 'Aniket',
+      'message' : contactMessage.value,
+      'from_email' : contactEmail.value
+    }
   };
 
-  GitHubCalendar(".calendar", "Mrkishansharma", {
-    responsive: true,
-    global_stats: true,
-    tooltips: true,
-  });
+  try {
 
-  document.getElementById("resume-button-1").onclick=()=>{
-window.open("https://drive.google.com/file/d/1H3co5FoEcrtLE6_CZXPZ5MqzJ8MW8shD/view?usp=sharing")
-  }
+    let Email = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      body : JSON.stringify(data),
+      headers : {
+        'Content-type' : 'application/json'
+      }
+    })
 
-  document.getElementById("resume-button-2").onclick=()=>{
-   window.open("https://drive.google.com/file/d/1H3co5FoEcrtLE6_CZXPZ5MqzJ8MW8shD/view?usp=sharing")
-  }
-     
-  
-  function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.display = "none";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.display= "block";
-  }
-
-  let mode = document.getElementById("mode");
-  mode.addEventListener("click", darkMode)
-
-  function darkMode(event){
-    let mode = event.target.alt;
-    if(mode == "dark"){
-      document.querySelector("body").style.backgroundColor = "rgb(18, 44, 67)";
-       event.target.alt = "light";
-    }else{
-      document.querySelector("body").style.backgroundColor = "#000";
-       event.target.alt = "dark";
+    if(Email.ok){
+      console.log('Msg received');
+      alert('Thanks for reaching out, Your email sent successfully!!')
     }
+    
+  } catch (err) {
+    console.log(err);
   }
 
 
-
-  let goTOHackerrank= document.getElementById('goTOHackerrank')
-  goTOHackerrank.addEventListener('click', ()=>{
-    location.href = 'https://www.hackerrank.com/kishansharma6377?hr_r=1'
-  })
+  contactName.value = null;
+  contactEmail.value = null;
+  contactMessage.value = null;
+};
