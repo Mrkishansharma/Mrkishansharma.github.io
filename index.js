@@ -3,7 +3,7 @@ let menu = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
-  header.classList.toggle("shadow", window.scrollY > 0);
+  header.classList.toggle("shadow", window.scrollY > 100);
 });
 
 menu.onclick = () => {
@@ -29,14 +29,14 @@ darkmode.onclick = () => {
 const resume = document.getElementById("resume-button-1");
 resume.onclick = (e) => {
     // e.preventDefault()
-    window.open("./Media/Aniket_Babariya_Resume.pdf")
+    window.open("./Media/Kishan-Sharma-Resume.pdf", "_blank")
     // console.log("Click");
 }
 
 const containerResume = document.getElementById("resume-button-2");
 containerResume.onclick = (e) => {
     // e.preventDefault()
-    window.open("./Media/Aniket_Babariya_Resume.pdf")
+    window.open("./Media/Kishan-Sharma-Resume.pdf", "_blank")
     // console.log("Click");
 }
                           
