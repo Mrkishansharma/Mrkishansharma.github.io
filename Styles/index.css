@@ -185,6 +185,12 @@ header.shadow {
 
 #home>div:nth-child(2) img {
   width: 100%;
+  transition: transform 3s ease;
+}
+#home>div:nth-child(2) img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .home-text h1 {
@@ -207,21 +213,16 @@ header.shadow {
 .homeImage img {
   width: 85%;
   border: 1px solid rgb(201, 201, 201);
-  /* border-radius: 50%; */
-  /* margin-left: 10%; */
-  /* transform: rotate(2deg); */
   margin-top: 20px;
+  transition: transform 3s ease;
 
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  /* width: 150px; */
 }
 .homeImage img:hover {
-  /* border-radius: 50%; */
-  /* margin-left: 10%; */
-  /* transform: rotate(2deg); */
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
+  transform: scale(1.2);
   cursor: pointer;
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
   filter: grayscale(10%);
