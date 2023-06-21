@@ -78,6 +78,7 @@ inputs.forEach((input) => {
 });
 
 
+
 const contactName = document.getElementById("contactName");
 const contactEmail = document.getElementById("contactEmail");
 const contactMessage = document.getElementById("contactMessage");
@@ -143,3 +144,26 @@ function handleSubmit(e) {
   })
 
 }
+
+
+
+
+
+
+  // typing text animation script
+  var typed = new Typed(".typing1", {
+    strings: ['Full Stack Web Developer',"Node Js Backend Developer", "Day Dreamer"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true,
+  });
+
+  const colors = ['red', '#007bff', 'orange', 'magenta', 'cyan', '#0078ff']
+  setInterval(()=>{
+    document.querySelector('.typing1').style.color = colors[Math.floor(Math.random()*(colors.length))]
+  },2000)
+
+  // setInterval(()=>{
+  //   document.querySelector('.logo').style.color = colors[Math.floor(Math.random()*(colors.length))]
+  // },1000)
+
