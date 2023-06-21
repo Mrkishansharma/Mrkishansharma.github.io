@@ -9,17 +9,17 @@ let navbar = document.querySelector(".navbar");
 var myNav = document.getElementById('nav-menu');
 var myNav2 = document.getElementById('menu-icon');
 console.log(myNav2);
-window.onscroll = function () { 
-    if ( document.documentElement.scrollTop >= 15 ) {
-        myNav.classList.add("nav-colored");
-        myNav2.classList.add("nav-colored");
-        // myNav.classList.remove("nav-transparent");
-    } 
-    else {
-        // myNav.classList.add("nav-transparent");
-        myNav.classList.remove("nav-colored");
-        myNav2.classList.remove("nav-colored");
-    }
+window.onscroll = function () {
+  if (document.documentElement.scrollTop >= 15) {
+    myNav.classList.add("nav-colored");
+    myNav2.classList.add("nav-colored");
+    // myNav.classList.remove("nav-transparent");
+  }
+  else {
+    // myNav.classList.add("nav-transparent");
+    myNav.classList.remove("nav-colored");
+    myNav2.classList.remove("nav-colored");
+  }
 };
 
 
@@ -45,18 +45,18 @@ darkmode.onclick = () => {
 
 const resume = document.getElementById("resume-button-1");
 resume.onclick = (e) => {
-    // e.preventDefault()
-    window.open("./Media/Kishan-Sharma-Resume.pdf", "_blank")
-    // console.log("Click");
+  // e.preventDefault()
+  window.open("./Media/Kishan-Sharma-Resume.pdf", "_blank")
+  // console.log("Click");
 }
 
 const containerResume = document.getElementById("resume-button-2");
 containerResume.onclick = (e) => {
-    // e.preventDefault()
-    window.open("./Media/Kishan-Sharma-Resume.pdf", "_blank")
-    // console.log("Click");
+  // e.preventDefault()
+  window.open("./Media/Kishan-Sharma-Resume.pdf", "_blank")
+  // console.log("Click");
 }
-                          
+
 
 const inputs = document.querySelectorAll(".input");
 
@@ -81,46 +81,65 @@ inputs.forEach((input) => {
 const contactName = document.getElementById("contactName");
 const contactEmail = document.getElementById("contactEmail");
 const contactMessage = document.getElementById("contactMessage");
+const ContactPhoneNumber = document.getElementById("ContactPhoneNumber");
 
-const contactSubmit = document.getElementById("contactSubmit");
-contactSubmit.onclick = async (e) => {
+
+function handleSubmit(e) {
   e.preventDefault();
+  console.log('submit clicked');
+
+  document.getElementById('contactSubmit').innerHTML = `<i class="fa fa-refresh fa-spin"></i> Send`
+  document.getElementById('contactSubmit').disabled = true;
+
   console.log([contactName.value, contactEmail.value, contactMessage.value]);
- 
+
   const data = {
     service_id: 'service_cud71u7',
     template_id: 'template_ra4xl6w',
-    user_id: '0',
+    user_id: 'EwOkQK6gbyJk_IKps',
     template_params: {
       'from_name': contactName.value,
-      'to_name' : 'Kishan',
-      'message' : contactMessage.value,
-      'from_email' : contactEmail.value
+      'to_name': 'Kishan',
+      'message': contactMessage.value,
+      'from_email': contactEmail.value,
+      'phone_number' : ContactPhoneNumber.value
     }
   };
 
-  try {
+  console.log(data);
 
-    let Email = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-      method: 'POST',
-      body : JSON.stringify(data),
-      headers : {
-        'Content-type' : 'application/json'
-      }
-    })
-    console.log(Email);
+  fetch('https://api.emailjs.com/api/v1.0/email/send', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(res => {
 
-    if(Email.ok){
-      console.log('Msg received');
-      alert('Thanks for reaching out, Your email sent successfully!!')
+    console.log('===>', res);
+    return res.text()
+
+  })
+  .then(data => {
+
+    console.log('=====>', data);
+
+    if(data=='OK'){
+      alert('Message Send Successfully.')
+    }else{
+      alert('Something Went Wrong! (Try After Some Time)')
     }
-    
-  } catch (err) {
+
+  })
+  .catch(err => {
+
     console.log(err);
-  }
 
+  })
+  .finally(() => {
+    document.getElementById('contactSubmit').innerHTML = `Send`
+    document.getElementById('contactSubmit').disabled = false;
+  })
 
-  contactName.value = null;
-  contactEmail.value = null;
-  contactMessage.value = null;
-};
+}

@@ -9,6 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="./Styles/contact.css">
   <link rel="stylesheet" href="./Styles/github.css">
   <link rel="stylesheet" href="./Styles/index.css">
@@ -756,29 +758,30 @@
         <span class="circle two"></span>
 
         <!-- <form action="https://formsubmit.co/kishansharma6377@gmail.com" method="POST" autocomplete="off"> -->
-        <form action="index.html" autocomplete="off">
+        <form action="index.html" autocomplete="off" onsubmit="handleSubmit(event)">
           <h3 class="title">Contact Me</h3>
           <div class="input-container">
-            <input type="text" name="name" class="input" id="contactName" />
+            <input type="text" name="name" class="input" id="contactName" required />
             <label for="">Your Name</label>
             <span>Your Name</span>
           </div>
           <div class="input-container">
-            <input type="email" name="email" class="input" id="contactEmail" />
+            <input type="email" name="email" class="input" id="contactEmail" required />
             <label for="">Email</label>
             <span>Email</span>
           </div>
           <div class="input-container">
-            <input type="tel" name="phone" class="input" />
+            <input type="tel" name="phone" id="ContactPhoneNumber" class="input" />
             <label for="">Phone</label>
             <span>Phone</span>
           </div>
           <div class="input-container textarea">
-            <textarea name="message" class="input" id="contactMessage"></textarea>
+            <textarea name="message" class="input" id="contactMessage" required></textarea>
             <label for="">Message</label>
             <span>Message</span>
           </div>
-          <input type="submit" value="Send" class="btn" id="contactSubmit" style="color: white;" />
+          <!-- <input type="submit" value="Send" class="btn" id="contactSubmit" style="color: white;" /> -->
+          <button type="submit" class="btn"  id="contactSubmit" style="color: white;" >Send</button>
         </form>
       </div>
     </div>
