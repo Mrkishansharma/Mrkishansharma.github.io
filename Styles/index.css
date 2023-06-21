@@ -16,9 +16,14 @@
 }
 
 #allGit div>img {
+  cursor: pointer;
   width: 100%;
-  border: 3px solid #0078ff;
+  /* border: 3px solid #0078ff; */
   border-radius: 5px;
+}
+#allGit div>img:hover {
+  transform: scale(1.05);
+  transition: transform 3s ease;
 }
 
 #calendar {
@@ -31,7 +36,7 @@
 
 .calendar {
   padding: 1%;
-  border: 2px solid teal;
+  /* border: 2px solid teal; */
 }
 
 * {
@@ -115,6 +120,7 @@ header.shadow {
   color: var(--text-color);
   letter-spacing: 1px;
 }
+
 .logo:hover {
   letter-spacing: 2px;
   color: var(--text-color);
@@ -187,6 +193,7 @@ header.shadow {
   width: 100%;
   transition: transform 3s ease;
 }
+
 #home>div:nth-child(2) img:hover {
   transform: scale(1.05);
   cursor: pointer;
@@ -220,6 +227,7 @@ header.shadow {
   border-radius: 4px;
   padding: 5px;
 }
+
 .homeImage img:hover {
   /* transform: scale(1.1); */
   transform: scale(1.2);
@@ -318,14 +326,29 @@ skills-container>div>div {
 }
 
 .skills-container>div {
-  border: 5px solid #0078ff;
+  /* border: 5px solid #0078ff; */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: 1px solid gray;
+  /* background-color: #007bff; */
   border-radius: 15px;
   padding: 30px 20px 10px;
   text-align: center;
 }
+.skills-container>div:hover {
+  letter-spacing: 2px;
+  cursor: pointer;  
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
 
 .skills-container img {
   width: 60%;
+
+}
+
+.skills-container img:hover {
+  transform: scale(1.2);
+  transition: transform 3s ease;
+
 }
 
 /* .special{
@@ -359,7 +382,9 @@ skills-container>div>div {
 }
 
 .project-card {
-  border: 5px solid #0078ff;
+  /* border: 5px solid #0078ff; */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: 1px solid gray;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -665,15 +690,14 @@ skills-container>div>div {
 
   #allGit div>img {
     width: 100%;
-    border: 3px solid #0078ff;
+    /* border: 3px solid #0078ff; */
     border-radius: 3px;
   }
 
   .skills-container>div {
-    border: 5px solid #0078ff;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 5px 15px rgb(73 73 73 / 35%);
+    /* box-shadow: 0 5px 15px rgb(73 73 73 / 35%); */
     margin: auto;
     padding: 20px;
     text-align: center;
@@ -739,6 +763,9 @@ skills-container>div>div {
   .textMargine {
     margin-top: 0px;
   }
+  #contact{
+    margin-top: 280px;
+  }
 
 }
 
@@ -767,5 +794,8 @@ skills-container>div>div {
 
   .contact-button {
     margin-left: 25%;
+  }
+  #contact{
+    margin-top: 280px;
   }
 }
