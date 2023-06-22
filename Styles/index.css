@@ -320,7 +320,7 @@ skills-container>div>div {
   /* width: 80%; */
   margin: auto;
   /* border: 1px solid wheat; */
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 40px;
   grid-row-gap: 30px;
 }
