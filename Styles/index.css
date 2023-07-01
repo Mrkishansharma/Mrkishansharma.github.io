@@ -335,7 +335,7 @@ skills-container>div>div {
   text-align: center;
 }
 .skills-container>div:hover {
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   cursor: pointer;  
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
