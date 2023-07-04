@@ -15,6 +15,8 @@ prev5.onclick = function(){
     reloadSlider();
 }
 
+// console.log('portfolio');
+
 function reloadSlider(){
     slider5.style.left = -items5[active5].offsetLeft + 'px';
     // 
