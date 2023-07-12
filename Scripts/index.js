@@ -2,7 +2,7 @@
 document.getElementById('home').style.height = `${window.innerHeight}px`;
 // document.getElementById('about').style.height = `${window.innerHeight}px`;
 
-
+console.log('kishan');
 
 let header = document.querySelector("header");
 let menu = document.querySelector("#menu-icon");
