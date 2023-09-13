@@ -1,7 +1,6 @@
 
 document.getElementById('home').style.height = `${window.innerHeight}px`;
 
-console.log('kishan');
 
 let header = document.querySelector("header");
 let menu = document.querySelector("#menu-icon");
@@ -15,10 +14,10 @@ window.onscroll = function () {
   if (document.documentElement.scrollTop >= 15) {
     myNav.classList.add("nav-colored");
     myNav2.classList.add("nav-colored");
-    // myNav.classList.remove("nav-transparent");
+    myNav.classList.remove("nav-transparent");
   }
   else {
-    // myNav.classList.add("nav-transparent");
+    myNav.classList.add("nav-transparent");
     myNav.classList.remove("nav-colored");
     myNav2.classList.remove("nav-colored");
   }
@@ -107,7 +106,7 @@ function handleSubmit(e) {
       'to_name': 'Kishan',
       'message': contactMessage.value,
       'from_email': contactEmail.value,
-      'phone_number' : ContactPhoneNumber.value
+      'phone_number': ContactPhoneNumber.value
     }
   };
 
@@ -120,32 +119,32 @@ function handleSubmit(e) {
     },
     body: JSON.stringify(data)
   })
-  .then(res => {
+    .then(res => {
 
-    console.log('===>', res);
-    return res.text()
+      console.log('===>', res);
+      return res.text()
 
-  })
-  .then(data => {
+    })
+    .then(data => {
 
-    console.log('=====>', data);
+      console.log('=====>', data);
 
-    if(data=='OK'){
-      alert('Message Send Successfully.')
-    }else{
-      alert('Internal Server Error.')
-    }
+      if (data == 'OK') {
+        alert('Message Send Successfully.')
+      } else {
+        alert('Internal Server Error.')
+      }
 
-  })
-  .catch(err => {
+    })
+    .catch(err => {
 
-    console.log(err);
+      console.log(err);
 
-  })
-  .finally(() => {
-    document.getElementById('contactSubmit').innerHTML = `Send`
-    document.getElementById('contactSubmit').disabled = false;
-  })
+    })
+    .finally(() => {
+      document.getElementById('contactSubmit').innerHTML = `Send`
+      document.getElementById('contactSubmit').disabled = false;
+    })
 
 }
 
@@ -154,30 +153,18 @@ function handleSubmit(e) {
 
 
 
-  // typing text animation script
-  // var typed = new Typed(".typing1", {
-  //   strings: ['Full Stack Web Developer',"Node Js Backend Developer", "Day Dreamer"],
-  //   typeSpeed: 100,
-  //   backSpeed: 60,
-  //   loop: true,
-  // });
+const typed = new Typed('.typing1', {
+  strings: ['', 'Full Stack Web Developer', 'Backend Developer', 'Frontend Developer', 'MERN Stack Developer'],
+  typeSpeed: 100,
+  backSpeed: 60,
+  backdelay: 10000,
+  loop: true
+})
 
-  const typed = new Typed('.typing1', {
-    strings: ['','Full Stack Web Developer', 'Node Js Backend Developer', 'Frontend Developer', 'Day Dreamer'],
-    typeSpeed: 100,
-    backSpeed: 60,
-    backdelay: 10000,
-    loop: true
-  })
-
-  const colors = ['red', '#007bff', 'orange', 'magenta', 'cyan', '#0078ff']
-  setInterval(()=>{
-    document.querySelector('.typing1').style.color = colors[Math.floor(Math.random()*(colors.length))]
-  },2000)
+const colors = ['red', '#007bff', 'orange', 'magenta', 'cyan', '#0078ff']
+setInterval(() => {
+  document.querySelector('.typing1').style.color = colors[Math.floor(Math.random() * (colors.length))]
+}, 2000)
 
 
-
-  // setInterval(()=>{
-  //   document.querySelector('.logo').style.color = colors[Math.floor(Math.random()*(colors.length))]
-  // },1000)
 

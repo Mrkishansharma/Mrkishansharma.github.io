@@ -18,7 +18,6 @@
 #allGit div>img {
   cursor: pointer;
   width: 100%;
-  /* border: 3px solid #0078ff; */
   border-radius: 5px;
 }
 #allGit div>img:hover {
@@ -28,15 +27,12 @@
 
 #calendar {
   height: auto;
-  /* border: 3px solid brown; */
-  /* margin-bottom: 50px; */
   padding-top: 0;
   padding-bottom: 0;
 }
 
 .calendar {
   padding: 1%;
-  /* border: 2px solid teal; */
 }
 
 * {
@@ -698,7 +694,6 @@ skills-container>div>div {
   .skills-container>div {
     border-radius: 15px;
     text-align: center;
-    /* box-shadow: 0 5px 15px rgb(73 73 73 / 35%); */
     margin: auto;
     padding: 20px;
     text-align: center;
