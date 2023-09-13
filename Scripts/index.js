@@ -1,6 +1,5 @@
 
 document.getElementById('home').style.height = `${window.innerHeight}px`;
-// document.getElementById('about').style.height = `${window.innerHeight}px`;
 
 console.log('kishan');
 
@@ -8,9 +7,6 @@ let header = document.querySelector("header");
 let menu = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
-// window.addEventListener("scroll", () => {
-//   header.classList.toggle("shadow", window.scrollY > 100);
-// });
 
 var myNav = document.getElementById('nav-menu');
 var myNav2 = document.getElementById('menu-icon');
@@ -104,8 +100,8 @@ function handleSubmit(e) {
 
   const data = {
     service_id: 'service_cud71u7',
-    template_id: 'template_ra4xl6w',
-    user_id: 'EwOkQK6gbyJk_IKps',
+    template_id: 'template_z5e44h9',
+    user_id: 'JifQZqT4RWnST7CtO',
     template_params: {
       'from_name': contactName.value,
       'to_name': 'Kishan',
@@ -137,7 +133,7 @@ function handleSubmit(e) {
     if(data=='OK'){
       alert('Message Send Successfully.')
     }else{
-      alert('Something Went Wrong! (Try After Some Time)')
+      alert('Internal Server Error.')
     }
 
   })
